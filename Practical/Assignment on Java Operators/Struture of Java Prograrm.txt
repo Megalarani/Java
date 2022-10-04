@@ -1,0 +1,49 @@
+//NAME: S.MEGALA
+//BATCH NUMBER: 2576
+
+STRUCTURE OF JAVA PROGRAM
+
+   1)Package Declaration
+   2)import Statement
+   3)Class Creation
+   4)main() method
+
+1)PACKAGE DECLARATION
+      A collection of classes, interfaces, methods to save single name is called package.
+      
+     (i)built-in
+          -->built-in packages are  defined by sum micro system.
+          -->started with 'java' keyword.
+          -->Totallly 32 packages.
+          -->examples: java.lang,java.util,java.io,java.sql,.......
+     (ii)user defined
+          -->User defined packages are define by user or programmer. 
+          -->started with 'package' keyword.
+          -->examples:package A;
+
+2)IMPORT STATEMENT
+      It is used to import specified classes or methods or interfaces.
+      example: import java.lang; , import java.util....
+
+3)CLASS CREATION
+      -->it is user defined datatype.
+      -->it is a collection of datamembers and methods.
+      -->An instance of clss is called a object
+
+4)main() method
+  Syntax:
+    public static void main(String[] args)
+    {
+     Statements...
+    }
+ 
+Example:
+package A;
+import java.io.*;
+class A1
+{
+public static void main(String[] args)
+{
+System.out.println("Structure of Java Program");
+}
+}

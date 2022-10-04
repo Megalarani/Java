@@ -1,0 +1,20 @@
+JAVA NAMING NOTATIONS
+
+i)Every keyword should be lowe case.
+ii)Every class name starts with uppercase and remaining letters lower case.
+iii)Every java method names must be lower case. If the method consist 2 words, first word is lower case and second word is uppercase. For example: readLine()
+iv)Every java interface name starts with uppercase.
+v)Every java constants must be uppercase.
+vi)Every java variable name mixed case.
+vii)Every java package name should be lower case.
+
+VARIABLE NAMING RULES
+
+i)Each variable name first letter starts with alphabet or underscoreor dollar.
+ii)Every variable name in between special symbols not allowed except underscore, dollar.
+iii)Every variable name is case sensitive.
+iv)Every variable name proceed with datatype.
+v)keyword is a variable not allowed.
+vi)Every variable name must be unique name.
+vii)Every variable recommended meaningful or logical name.
+viii)Every variable minimum 1 character length, maximum no limit.
