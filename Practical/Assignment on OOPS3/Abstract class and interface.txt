@@ -1,0 +1,105 @@
+// NAME : MEGALA S
+// BATCH CODE : 2576
+//Abstract class and interface implementaion with Example
+
+ABSTRACT CLASS
+  -->to hide implementation details and show only method name.
+  -->it is used to hide important details and show required functions.
+  -->what object interanlly exists and how it is process.
+  -->abstract class[0 to 100%]abstraction
+
+i)Abstract class :
+       A class which is declared as abstract is known as an "abstract class" 
+       It can have abstract and non abstract methods. 
+       It needs to be extended and its method implemented.  
+       It cannot be instantiated.
+
+  Syntax:
+    abstract class A
+    {
+     Statements.....
+    } 
+ii)Abstract Method:
+     A method which is declared as abstract and does not have implementation is known as an "abstract method"
+
+Example:
+abstract class Fruit
+{
+Fruit()
+{
+System.out.println("abstract ctr");
+}
+void colour()
+{
+System.out.println("non abstract method");
+}
+}
+class Mango extends Fruit
+{
+void colour2()
+{
+System.out.println("Mango Fruit");
+}
+}
+class Orange extends Fruit
+{
+void Colour3()
+{
+System.out.println("Orange Fruit");
+}
+}
+public class Abstractdemo {
+public  static void main(String[] args) 
+{		
+Mango m=new Mango();
+Orange o=new Orange();
+m.colour();
+m.colour2();
+o.colour();
+o.colour3();
+}
+}
+
+
+
+INTERFACE IMPLEMENTATION
+    An interface in java is a blueprint of a class. 
+    It has static constants and abstract methods.
+    The interface in Java is a mechanism to achieve abstraction. 
+    There can be only abstract methods in the Java interface, not method body.
+    It is used to achieve abstraction and multiple inheritance in Java.
+    Java Interface also represents the IS-A relationship.
+    It cannot be instantiated just like the abstract class.
+    interface[100%]abstraction.
+
+Advantages:
+    It is used to achieve fully abstraction.
+    By interface, we can support the functionality of multiple inheritance.
+    It can be used to achieve loose coupling.
+
+Syntax:
+interface name
+ {
+   //static constants
+  //abstract method by default
+ }
+
+Example:
+public interface A
+{
+void m1();
+}
+class B implements A
+{
+public void m1()
+{
+System.out.println("Welcome");
+}
+}
+public class Interfacedemo 
+{
+public static void main(String[] args) {
+B b=new B();
+b.m1();
+}
+}
