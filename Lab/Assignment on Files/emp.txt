@@ -1,0 +1,5 @@
+Employee Details:
+
+eid = 1001
+ename = Ravi
+salary = 30000

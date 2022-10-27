@@ -1,0 +1,1 @@
+The PrintWriter class of the java.io package can be used to write output data in a commonly readable form (text).
