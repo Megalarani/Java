@@ -1,0 +1,63 @@
+// NAME : MEGALA S
+// BATCH CODE : 2576
+// Create Student.txt file and storing table details......
+
+//Inserting datas...
+import java.io.*;
+import java.sql.*;
+public class Mysqldemo1 {
+
+	public static void main(String[] args) {
+		try {
+		//Class.forName("com.mysql.jdbc.Driver");
+		Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database","root", "Megala20");
+		String query="insert into filetable values(?,?)";
+		PreparedStatement st=cn.prepareStatement(query);
+		File f=new File("E:\\Megala\\Eclipse\\myfile.txt");
+		FileReader fr=new FileReader(f);
+		st.setInt(1, 26);
+		st.setCharacterStream(2,fr,(int)f.length());
+		int rs=st.executeUpdate();
+		System.out.println(rs+"records inserted");
+cn.close();
+	}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+}
+}
+
+
+
+//Retrieving datas...
+import java.io.*;
+import java.sql.*;
+public class Mysqldemo1 {
+
+	public static void main(String[] args) {
+		try {
+		//Class.forName("com.mysql.jdbc.Driver");
+		Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database","root", "Megalarani2000");
+		String query="select * from filetable";
+		PreparedStatement st=cn.prepareStatement(query);
+		ResultSet rs=st.executeQuery();
+		rs.next();
+		Clob c=rs.getClob(2);
+		Reader r=c.getCharacterStream();
+		FileWriter fw=new FileWriter("E:\\Megala\\Anudip Course\\Eclipse\\myfile.txt");
+		int i;
+		while((i=r.read())!=-1)
+			fw.write((char)i);
+		fw.close();
+		cn.close();
+		System.out.println("Success");
+	}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+}
+}

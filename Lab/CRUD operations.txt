@@ -1,0 +1,84 @@
+// NAME : MEGALA S
+// BATCH CODE : 2576
+// CRUD operations on Student table......
+
+//Insertion operation on student table...
+import java.sql.*;
+public class Mysqldemo1 {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		//Class.forName("com.mysql.jdbc.Driver");
+		Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database","root", "Megala20");
+		Statement st=cn.createStatement();
+		int rs=st.executeUpdate("insert into student1 values(1507,'kaviya',95,'python')");
+		if(rs>0)
+		{
+			System.out.println(rs+"row inserted");
+		}
+		else
+		{
+			System.out.println("insertion failed");
+		}
+cn.close();
+	}
+
+}
+
+
+//Updation on student table...
+import java.sql.*;
+public class Mysqldemo1 {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		//Class.forName("com.mysql.jdbc.Driver");
+		Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database","root", "Megala20");
+		String sql="update student1 set sname='mahalakshmi',marks=98 where sid=1504";
+		Statement st=cn.createStatement();
+		int rs=st.executeUpdate(sql);
+		if(rs>0)
+		{
+	      System.out.println(rs+"records updates");
+		}
+cn.close();
+	}
+
+}
+
+
+//Deletion operation on Student table...
+import java.sql.*;
+public class Mysqldemo1 {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		//Class.forName("com.mysql.jdbc.Driver");
+		Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database","root", "Megala20");
+		String sql="delete from student1 where sid=1505";
+		Statement st=cn.createStatement();
+		int rs=st.executeUpdate(sql);
+		if(rs>0)
+		{
+	      System.out.println(rs+"records deleted");
+		}
+cn.close();
+	}
+
+}
+
+
+//Selection operation on Student table..
+import java.sql.*;
+public class Mysqldemo1 {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		//Class.forName("com.mysql.jdbc.Driver");
+		Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database","root", "Megala20");
+		Statement st=cn.createStatement();
+		ResultSet rs=st.executeQuery("select * from student1");
+		while(rs.next())
+		{
+			System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getInt(3)+rs.getString(4));
+		}
+cn.close();
+	}
+
+}
