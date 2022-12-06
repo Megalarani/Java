@@ -1,0 +1,58 @@
+//NAME : MEGALA S
+//BATCH CODE : 2576
+//Create class with Addition,Subtraction,Multiplication,Division and Prepare junit testcase with AssertClass.....
+
+//Calculation1.java 
+package maventwo;
+
+public class Calculation1 {
+public int addtwo(int x,int y)
+{
+	return x+y;
+}
+
+public int subtwo(int x2,int y2)
+{
+	return x2-y2;
+}
+
+public int multwo(int x3,int y3)
+{
+	return x3*y3;
+}
+
+public int divtwo(int x4,int y4)
+{
+	return x4/y4;
+}
+}
+
+
+//TestcaseCalc.java
+package maventwo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestcaseCalc1 {
+
+	@Test
+	public void test1() 
+	{
+		Calculation1 c1=new Calculation1();
+		int exp1=25;
+		int exp2=10;
+		int exp3=100;
+		int exp4=5;
+		int act1=c1.addtwo(20, 5);
+		int act2=c1.subtwo(20, 10);
+		int act3=c1.multwo(10, 10);
+		int act4=c1.divtwo(10, 2);
+		assertEquals(exp1,act1);
+		assertEquals(exp2,act2);
+		assertEquals(exp3,act3);
+		assertEquals(exp4,act4);
+	}
+	
+}
